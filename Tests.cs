@@ -47,7 +47,7 @@ namespace Permission_demo
         //    app.Repl();
         //}
 
-       
+
 
         [Test]
         public void AlertShowsUp()
@@ -56,47 +56,41 @@ namespace Permission_demo
             //Thread.Sleep(10 * 1000);
             //app.WaitForElement(x => x.Marked("background location"));
             //creating an anrray of possible permissions:
-            string[] stringArray = new string[13];
+            string[] stringArray = new string[10];
             stringArray[0] = "background location";
             stringArray[1] = "contacts";
             stringArray[2] = "calendar";
             stringArray[3] = "reminders";
             //stringArray[4] = "photos";
-            stringArray[4] = "bluetooth";
-            stringArray[5] = "microphone";
-            stringArray[6] = "motion";
-            stringArray[7] = "camera";
-            stringArray[8] = "facebook";
+            //stringArray[4] = "bluetooth";
+            stringArray[4] = "microphone";
+            stringArray[5] = "motion";
+            stringArray[6] = "camera";
+            //stringArray[7] = "facebook";
             //stringArray[10] = "twitter";
-            stringArray[9] = "home kit";
-           // stringArray[12] = "health kit";
-            stringArray[10] = "apns";
-            stringArray[11] = "apple music";
-            stringArray[12] = "speech recognition";
+            //stringArray[7] = "home kit";
+            // stringArray[12] = "health kit";
+            stringArray[7] = "apns";
+            stringArray[8] = "apple music";
+            stringArray[9] = "speech recognition";
 
-            for (int i = 0; i < 4; i++){
+            for (int i = 0; i < stringArray.Length; i++)
+            {
                 app.Tap(x => x.Marked(stringArray[i]));
-                Thread.Sleep(10 * 1000);
-                app.Screenshot("show_Alert for " + stringArray[i]);
+                app.Screenshot("Show Alert for " + stringArray[i]);
                 // Thread.SpinWait(10 * 1000);
-                app.Tap(x => x.Marked(stringArray[i]));
-                Thread.Sleep(10 * 1000);
-                app.Screenshot("Alert_dismissed");
+                //app.Tap(x => x.Marked(stringArray[i]));
+                app.DismissSpringboardAlerts();
+                app.Screenshot("Alert Dismissed");
+                if (i >= 6)
+                {
+                    app.ScrollDown();
+                }
             }
 
-
-            //app.Tap(x => x.Marked("speech recognition"));
-            //Thread.Sleep(10 * 1000);
         }
 
-        //[Test]
-        //public void AlertDismiised()
-        //{
-        //    app.ScrollDown();
-        //    app.ScrollUp();
-        //    //Thread.Sleep(10 * 1000);
-        //}
-
+ 
     }
 
 }

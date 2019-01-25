@@ -8,3 +8,13 @@
 /Users/ahanag22/Projects/Permission_demo/Permission_demo/obj/Debug/Permission_demo.csproj.CopyComplete
 /Users/ahanag22/Projects/Permission_demo/Permission_demo/obj/Debug/Permission_demo.dll
 /Users/ahanag22/Projects/Permission_demo/Permission_demo/obj/Debug/Permission_demo.pdb
+/Users/ahanag22/Desktop/untitled folder/Dismissiing_iOS_ALerts/bin/Debug/Permission_demo.dll
+/Users/ahanag22/Desktop/untitled folder/Dismissiing_iOS_ALerts/bin/Debug/Permission_demo.pdb
+/Users/ahanag22/Desktop/untitled folder/Dismissiing_iOS_ALerts/bin/Debug/nunit.framework.dll
+/Users/ahanag22/Desktop/untitled folder/Dismissiing_iOS_ALerts/bin/Debug/Xamarin.UITest.dll
+/Users/ahanag22/Desktop/untitled folder/Dismissiing_iOS_ALerts/bin/Debug/nunit.framework.xml
+/Users/ahanag22/Desktop/untitled folder/Dismissiing_iOS_ALerts/bin/Debug/Xamarin.UITest.xml
+/Users/ahanag22/Desktop/untitled folder/Dismissiing_iOS_ALerts/obj/Debug/Permission_demo.csproj.CoreCompileInputs.cache
+/Users/ahanag22/Desktop/untitled folder/Dismissiing_iOS_ALerts/obj/Debug/Permission_demo.csproj.CopyComplete
+/Users/ahanag22/Desktop/untitled folder/Dismissiing_iOS_ALerts/obj/Debug/Permission_demo.dll
+/Users/ahanag22/Desktop/untitled folder/Dismissiing_iOS_ALerts/obj/Debug/Permission_demo.pdb
