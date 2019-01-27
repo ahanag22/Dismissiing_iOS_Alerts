@@ -36,19 +36,8 @@ namespace Permission_demo
               .StartApp();
         }
 
-        //[Test]
-        //public void AppLaunches()
-        //{
-        //    app.Screenshot("First screen.");
-        //}
-        //[Test]
-        //public void repl()
-        //{
-        //    app.Repl();
-        //}
 
-
-
+        //checking only those alerts whose permission has been implemented
         [Test]
         public void AlertShowsUp()
         {
@@ -90,7 +79,18 @@ namespace Permission_demo
 
         }
 
- 
+        //checking separtely since tapping on photos naviagating to a new screen
+        //test is failing on 11.* devices in App Center Test
+        //Clicking Photos on 11.* devices diplays a Pop up saying "Apple ID Required"
+        [Test]
+        public void AlertShowsUpForPhotos()
+        {
+            Thread.Sleep(10 * 1000);
+            app.Tap(x => x.Marked("photos"));
+            app.Screenshot("Alert shows up");
+            app.DismissSpringboardAlerts();
+            app.Screenshot("Alert Dismissed");
+        }
     }
 
 }
