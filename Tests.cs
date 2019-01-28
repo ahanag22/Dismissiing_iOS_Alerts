@@ -37,39 +37,46 @@ namespace Permission_demo
         }
 
 
-        //checking only those alerts whose permission has been implemented
+
+
+        //add Xamarin.UITest tests to the project https://github.com/calabash/Permissions
+        //App displays iOS privacy settings menu items
+        //tapping each privacy settings menu items which pops up an alert
+        //checking if the popup is being handled by our logic
+        //our logic for dismissing popups does recognize the text of the popups 
+        //checked only the popups we've added to our logic here https://github.com/calabash/DeviceAgent.iOS/blob/develop/Server/Utilities/SpringBoardAlerts.m
+
         [Test]
         public void AlertShowsUp()
         {
-            //app.ScrollDown();
-            //Thread.Sleep(10 * 1000);
-            //app.WaitForElement(x => x.Marked("background location"));
-            //creating an anrray of possible permissions:
-            string[] stringArray = new string[10];
+
+            //creating an anrray of menu items:
+            string[] stringArray = new string[11];
             stringArray[0] = "background location";
             stringArray[1] = "contacts";
             stringArray[2] = "calendar";
             stringArray[3] = "reminders";
-            //stringArray[4] = "photos";
-            //stringArray[4] = "bluetooth";
             stringArray[4] = "microphone";
             stringArray[5] = "motion";
             stringArray[6] = "camera";
-            //stringArray[7] = "facebook";
-            //stringArray[10] = "twitter";
+            stringArray[7] = "twitter";
             //stringArray[7] = "home kit";
             // stringArray[12] = "health kit";
-            stringArray[7] = "apns";
-            stringArray[8] = "apple music";
-            stringArray[9] = "speech recognition";
+            stringArray[8] = "apns";
+            stringArray[9] = "apple music";
+            stringArray[10] = "speech recognition";
 
             for (int i = 0; i < stringArray.Length; i++)
             {
                 app.Tap(x => x.Marked(stringArray[i]));
                 app.Screenshot("Show Alert for " + stringArray[i]);
+                //if(i > 4){
+                //    app.DismissSpringboardAlerts();
+                //}
                 // Thread.SpinWait(10 * 1000);
                 //app.Tap(x => x.Marked(stringArray[i]));
                 app.DismissSpringboardAlerts();
+                //Thread.Sleep(10 * 1000);
                 app.Screenshot("Alert Dismissed");
                 if (i >= 6)
                 {
@@ -80,7 +87,7 @@ namespace Permission_demo
         }
 
         //checking separtely since tapping on photos naviagating to a new screen
-        //test is failing on 11.* devices in App Center Test
+        //test is failing on 11.* devices in Test Cloud
         //Clicking Photos on 11.* devices diplays a Pop up saying "Apple ID Required"
         [Test]
         public void AlertShowsUpForPhotos()
@@ -89,6 +96,7 @@ namespace Permission_demo
             app.Tap(x => x.Marked("photos"));
             app.Screenshot("Alert shows up");
             app.DismissSpringboardAlerts();
+            //Thread.Sleep(30 * 1000);
             app.Screenshot("Alert Dismissed");
         }
     }
