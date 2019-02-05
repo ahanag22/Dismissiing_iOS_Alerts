@@ -41,9 +41,9 @@ namespace Permission_demo
 
         //adding Xamarin.UITest tests to the project https://github.com/calabash/Permissions
         //App displays iOS privacy settings menu items
-        //tapping each privacy settings menu items which pops up an alert
-        //checking if the popup is being handled by our logic
-        //our logic for dismissing popups does recognize the text of the popups 
+        //tapping each privacy settings menu items that pops up an alert
+        //checking if the popup is being handled by the logic
+        //the logic for dismissing popups does recognize the text of the popups 
         //checked only the popups we've added to our logic here https://github.com/calabash/DeviceAgent.iOS/blob/develop/Server/Utilities/SpringBoardAlerts.m
 
         [Test]
@@ -68,10 +68,12 @@ namespace Permission_demo
 
             for (int i = 0; i < stringArray.Length; i++)
             {
+                //tapping each menu item
                 app.Tap(x => x.Marked(stringArray[i]));
+                //taking screenshot
                 app.Screenshot("Show Alert for " + stringArray[i]);
-                //app.DismissSpringboardAlerts();
-                Thread.Sleep(30* 1000);
+                //Adding a sleep before tapping the next menu item to give the UI time to be ready
+                Thread.Sleep(10* 1000);
                 if (i >= 6)
                 {
                     app.ScrollDown();
