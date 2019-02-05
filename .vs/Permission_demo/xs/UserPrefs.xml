@@ -1,15 +1,8 @@
 ﻿<Properties StartupConfiguration="{66AD15AD-7B04-4E07-98C2-C88E0B4CA451}|Unit Tests">
   <MonoDevelop.Ide.Workbench ActiveDocument="Tests.cs">
     <Files>
-      <File FileName="Tests.cs" Line="98" Column="1" />
+      <File FileName="Tests.cs" Line="46" Column="39" />
     </Files>
-    <Pads>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="Permission_demo" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
