@@ -39,7 +39,7 @@ namespace Permission_demo
 
 
 
-        //add Xamarin.UITest tests to the project https://github.com/calabash/Permissions
+        //adding Xamarin.UITest tests to the project https://github.com/calabash/Permissions
         //App displays iOS privacy settings menu items
         //tapping each privacy settings menu items which pops up an alert
         //checking if the popup is being handled by our logic
